@@ -1,0 +1,325 @@
+:root {
+  --primary-color: #1a237e;
+  --secondary-color: #ffd700;
+  --text-color: #ffffff;
+  --background-gradient: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+  --card-background: rgba(255, 255, 255, 0.1);
+  --card-hover: rgba(255, 255, 255, 0.15);
+  --card-active: rgba(255, 215, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: var(--background-gradient);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+header {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.header-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-section p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.toc-container {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.toc-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.toc-item {
+  background: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  will-change: transform;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toc-item:hover {
+  transform: translateY(-3px);
+  background: var(--card-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toc-item.active {
+  background: var(--card-active);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.toc-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.toc-item p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.prayer-container {
+  display: none;
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.prayer-container.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+  transform: translateY(0);
+}
+
+.prayer-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--secondary-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.prayer-content {
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: justify;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.prayer-content p {
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-content .blessing {
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    grid-template-columns: 1fr;
+  }
+
+  .header-section h1 {
+    font-size: 2rem;
+  }
+
+  .toc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prayer-content {
+    font-size: 1.1rem;
+  }
+
+  .prayer-container {
+    padding: 1.5rem;
+  }
+}
+
+.prayer-card {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.prayer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.prayer-card h3 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.prayer-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-card .blessing {
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .prayer-card {
+    padding: 1rem;
+  }
+
+  .prayer-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .prayer-card p {
+    font-size: 1.1rem;
+  }
+
+  .prayer-card .blessing {
+    font-size: 1.2rem;
+  }
+}
+
+.prayer-toc {
+  background: var(--card-background);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-toc h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.prayer-toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.prayer-toc-item {
+  background: var(--card-background);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.prayer-toc-item:hover {
+  background: var(--primary-color);
+  color: var(--card-background);
+  transform: translateY(-2px);
+}
+
+.prayer-toc-item.active {
+  background: var(--primary-color);
+  color: var(--card-background);
+}
+
+@media (max-width: 768px) {
+  .prayer-toc-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .prayer-toc-item {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+.checklist-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.checklist-button:hover {
+  background-color: #2980b9;
+}

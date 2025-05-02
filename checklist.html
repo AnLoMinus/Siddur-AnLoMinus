@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צ'קליסט בניית סידור אנלומינוס</title>
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .checklist-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-left: 1rem;
+            width: 20px;
+            height: 20px;
+        }
+
+        .checklist-item label {
+            flex: 1;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 1.5rem 0 0.5rem 0;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #3498db;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <button class="close-button" onclick="toggleModal()">✕</button>
+        <div class="modal-content">
+            <h1>צ'קליסט בניית סידור אנלומינוס</h1>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="progress-text" id="progress-text">0% הושלם</div>
+
+            <div class="section-title">סדר השכמת הבוקר</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="moda-ani" onchange="updateProgress()">
+                    <label for="moda-ani">מודה אני</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="netilat-yadayim" onchange="updateProgress()">
+                    <label for="netilat-yadayim">נטילת ידיים</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="asher-yatzar" onchange="updateProgress()">
+                    <label for="asher-yatzar">אשר יצר</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="elohai-neshama" onchange="updateProgress()">
+                    <label for="elohai-neshama">אלוהי נשמה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="birkot-hashachar" onchange="updateProgress()">
+                    <label for="birkot-hashachar">ברכות השחר</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="birkot-hatorah" onchange="updateProgress()">
+                    <label for="birkot-hatorah">ברכות התורה</label>
+                </li>
+            </ul>
+
+            <div class="section-title">סדר תיקון חצות</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="tikkun-rachel" onchange="updateProgress()">
+                    <label for="tikkun-rachel">תיקון רחל</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="tikkun-leah" onchange="updateProgress()">
+                    <label for="tikkun-leah">תיקון לאה</label>
+                </li>
+            </ul>
+
+            <div class="section-title">תפילת שחרית לימי החול</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="eliyahu" onchange="updateProgress()">
+                    <label for="eliyahu">פתיחת אליהו</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="tzitzit" onchange="updateProgress()">
+                    <label for="tzitzit">סדר עטיפת ציצית</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="tefillin" onchange="updateProgress()">
+                    <label for="tefillin">סדר הנחת תפילין</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="hanna" onchange="updateProgress()">
+                    <label for="hanna">ותתפלל חנה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="pitum" onchange="updateProgress()">
+                    <label for="pitum">פטום הקטורת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="hodu" onchange="updateProgress()">
+                    <label for="hodu">הודו</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="baruch-sheamar" onchange="updateProgress()">
+                    <label for="baruch-sheamar">ברוך שאמר</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="pesukei-dzimra" onchange="updateProgress()">
+                    <label for="pesukei-dzimra">פסוקי דזמרה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shema" onchange="updateProgress()">
+                    <label for="shema">קריאת שמע וברכותיה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="amida" onchange="updateProgress()">
+                    <label for="amida">תפילת העמידה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="vidui" onchange="updateProgress()">
+                    <label for="vidui">וידוי</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="sefer-torah" onchange="updateProgress()">
+                    <label for="sefer-torah">ספר תורה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="ashrei" onchange="updateProgress()">
+                    <label for="ashrei">אשרי יושבי ביתך</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="uva-letzion" onchange="updateProgress()">
+                    <label for="uva-letzion">ובא לציון גואל</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="beit-yaakov" onchange="updateProgress()">
+                    <label for="beit-yaakov">בית יעקב</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shir" onchange="updateProgress()">
+                    <label for="shir">שיר של יום</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="koh" onchange="updateProgress()">
+                    <label for="koh">קוה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="pitum-end" onchange="updateProgress()">
+                    <label for="pitum-end">פטום הקטורת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="aleinu" onchange="updateProgress()">
+                    <label for="aleinu">עלינו לשבח</label>
+                </li>
+            </ul>
+
+            <div class="section-title">תוספות לשחרית</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="shloshah-ikarim" onchange="updateProgress()">
+                    <label for="shloshah-ikarim">שלשה עשר עיקרים</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="asar-zichronot" onchange="updateProgress()">
+                    <label for="asar-zichronot">עשר זכירות</label>
+                </li>
+            </ul>
+
+            <div class="section-title">תפילת מנחה לימי החול</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="mincha-amida" onchange="updateProgress()">
+                    <label for="mincha-amida">תפילת העמידה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="mincha-vidui" onchange="updateProgress()">
+                    <label for="mincha-vidui">וידוי</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="mincha-aleinu" onchange="updateProgress()">
+                    <label for="mincha-aleinu">עלינו לשבח</label>
+                </li>
+            </ul>
+
+            <div class="section-title">תפילת ערבית לימי החול</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="arvit-shema" onchange="updateProgress()">
+                    <label for="arvit-shema">קריאת שמע וברכותיה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="arvit-amida" onchange="updateProgress()">
+                    <label for="arvit-amida">תפילת העמידה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="arvit-aleinu" onchange="updateProgress()">
+                    <label for="arvit-aleinu">עלינו לשבח</label>
+                </li>
+            </ul>
+
+            <div class="section-title">ספירת העומר</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="omer" onchange="updateProgress()">
+                    <label for="omer">ספירת העומר</label>
+                </li>
+            </ul>
+
+            <div class="section-title">ברכת הלבנה</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="levana" onchange="updateProgress()">
+                    <label for="levana">ברכת הלבנה</label>
+                </li>
+            </ul>
+
+            <div class="section-title">קריאת שמע שעל המיטה</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="shema-al-hamita" onchange="updateProgress()">
+                    <label for="shema-al-hamita">קריאת שמע שעל המיטה</label>
+                </li>
+            </ul>
+
+            <div class="section-title">סדר שבת</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="shabbat-candles" onchange="updateProgress()">
+                    <label for="shabbat-candles">סדר הדלקת נרות שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shir-hashirim" onchange="updateProgress()">
+                    <label for="shir-hashirim">שיר השירים</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="kabbalat-shabbat" onchange="updateProgress()">
+                    <label for="kabbalat-shabbat">קבלת שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shabbat-evening" onchange="updateProgress()">
+                    <label for="shabbat-evening">תפילת ערבית של שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shabbat-night" onchange="updateProgress()">
+                    <label for="shabbat-night">סדר ליל שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shabbat-morning" onchange="updateProgress()">
+                    <label for="shabbat-morning">שחרית של שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="musaf" onchange="updateProgress()">
+                    <label for="musaf">מוסף של שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="seuda-shenit" onchange="updateProgress()">
+                    <label for="seuda-shenit">סדר סעודה שנייה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="shabbat-mincha" onchange="updateProgress()">
+                    <label for="shabbat-mincha">מנחה לשבת קודש</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="seuda-shlishit" onchange="updateProgress()">
+                    <label for="seuda-shlishit">סעודה שלישית</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="havdalah" onchange="updateProgress()">
+                    <label for="havdalah">הבדלה ומוצאי שבת</label>
+                </li>
+            </ul>
+
+            <div class="section-title">ברכות</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="birkat-hamazon" onchange="updateProgress()">
+                    <label for="birkat-hamazon">ברכת המזון</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="meein-shalosh" onchange="updateProgress()">
+                    <label for="meein-shalosh">ברכת מעין שלוש</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="birkot-hanehenin" onchange="updateProgress()">
+                    <label for="birkot-hanehenin">ברכות הנהנין</label>
+                </li>
+            </ul>
+
+            <div class="section-title">סדר ראש חודש</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="rosh-chodesh" onchange="updateProgress()">
+                    <label for="rosh-chodesh">סדר ראש חודש</label>
+                </li>
+            </ul>
+
+            <div class="section-title">תפילה לשלוש רגלים</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="regalim" onchange="updateProgress()">
+                    <label for="regalim">תפילה לשלוש רגלים</label>
+                </li>
+            </ul>
+
+            <div class="section-title">חנוכה</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="hanukkah" onchange="updateProgress()">
+                    <label for="hanukkah">חנוכה</label>
+                </li>
+            </ul>
+
+            <div class="section-title">פורים</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="purim" onchange="updateProgress()">
+                    <label for="purim">פורים</label>
+                </li>
+            </ul>
+
+            <div class="section-title">חודש ניסן</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="nissan" onchange="updateProgress()">
+                    <label for="nissan">חודש ניסן</label>
+                </li>
+            </ul>
+
+            <div class="section-title">ברכות ותפילות שונות</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="erusin" onchange="updateProgress()">
+                    <label for="erusin">סדר ארוסין ונשואין</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="sheva-brachot" onchange="updateProgress()">
+                    <label for="sheva-brachot">סדר שבע ברכות</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="brit-mila" onchange="updateProgress()">
+                    <label for="brit-mila">סדר ברית מילה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="pidyon-haben" onchange="updateProgress()">
+                    <label for="pidyon-haben">סדר פדיון הבן</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="mezuzah" onchange="updateProgress()">
+                    <label for="mezuzah">ברכת המזוזה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="maake" onchange="updateProgress()">
+                    <label for="maake">ברכת המעקה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="challah" onchange="updateProgress()">
+                    <label for="challah">סדר הפרשת חלה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="tevilat-kelim" onchange="updateProgress()">
+                    <label for="tevilat-kelim">ברכת טבילת כלים</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="terumot" onchange="updateProgress()">
+                    <label for="terumot">סדר הפרשת תרומות ומעשרות</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="keshet" onchange="updateProgress()">
+                    <label for="keshet">ברכת הקשת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="barakim" onchange="updateProgress()">
+                    <label for="barakim">ברכת ברקים ורעמים</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="refuah" onchange="updateProgress()">
+                    <label for="refuah">תפלת הנוטל תרופה</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="derech" onchange="updateProgress()">
+                    <label for="derech">תפלת הדרך</label>
+                </li>
+            </ul>
+
+            <div class="section-title">תעניות ואבילות</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="selichot" onchange="updateProgress()">
+                    <label for="selichot">סליחות</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="avelut" onchange="updateProgress()">
+                    <label for="avelut">אבלות</label>
+                </li>
+            </ul>
+
+            <div class="section-title">משניות</div>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <input type="checkbox" id="mishnayot-shabbat" onchange="updateProgress()">
+                    <label for="mishnayot-shabbat">משניות שבת</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" id="pirkei-avot" onchange="updateProgress()">
+                    <label for="pirkei-avot">פרקי אבות</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+            const progress = (checked.length / checkboxes.length) * 100;
+
+            document.getElementById('progress').style.width = progress + '%';
+            document.getElementById('progress-text').textContent = Math.round(progress) + '% הושלם';
+        }
+
+        function toggleModal() {
+            const modal = document.querySelector('.modal');
+            modal.style.display = modal.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        // שמירת מצב הצ'קליסט ב-localStorage
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                localStorage.setItem(this.id, this.checked);
+            });
+
+            // טעינת מצב שמור
+            const savedState = localStorage.getItem(checkbox.id);
+            if (savedState !== null) {
+                checkbox.checked = savedState === 'true';
+            }
+        });
+
+        // עדכון התקדמות ראשוני
+        updateProgress();
+    </script>
+</body>
+
+</html>

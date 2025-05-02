@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סידור אנלומינוס</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-section">
+                <h1>🕊️ סידור אנלומינוס</h1>
+                <p>סידור תפילה מקוון עם עיצוב מודרני</p>
+                <button onclick="window.open('checklist.html', '_blank', 'width=800,height=600')"
+                    class="checklist-button">📋 צ'קליסט בנייה</button>
+            </div>
+            <div class="toc-container">
+                <h2>📑 תוכן העניינים</h2>
+                <div class="toc-grid">
+                    <div class="toc-item" data-prayer="introduction">
+                        <h3>📖 הקדמה לסידור</h3>
+                        <p>אושר התפילה מתוך ליקוטי מוהר"ן</p>
+                    </div>
+                    <div class="toc-item" data-prayer="morning">
+                        <h3>🌅 סדר השכמת הבוקר</h3>
+                        <p>תפילות הבוקר והכנות</p>
+                    </div>
+                    <div class="toc-item" data-prayer="midnight">
+                        <h3>🌌 סדר תיקון חצות</h3>
+                        <p>תפילות חצות הלילה</p>
+                    </div>
+                    <div class="toc-item" data-prayer="shacharit">
+                        <h3>🌄 תפילת שחרית</h3>
+                        <p>תפילת הבוקר לימי חול</p>
+                    </div>
+                    <div class="toc-item" data-prayer="mincha">
+                        <h3>🌇 תפילת מנחה</h3>
+                        <p>תפילת הצהריים לימי חול</p>
+                    </div>
+                    <div class="toc-item" data-prayer="arvit">
+                        <h3>🌃 תפילת ערבית</h3>
+                        <p>תפילת הערב לימי חול</p>
+                    </div>
+                    <div class="toc-item" data-prayer="shabbat">
+                        <h3>🕯️ שבת ומועדים</h3>
+                        <p>תפילות שבת וחגים</p>
+                    </div>
+                    <div class="toc-item" data-prayer="blessings">
+                        <h3>🙏 ברכות ותפילות שונות</h3>
+                        <p>ברכות הנהנין ותפילות מיוחדות</p>
+                    </div>
+                    <div class="toc-item" data-prayer="learning">
+                        <h3>📖 משניות ולימוד יומי</h3>
+                        <p>לימוד תורה יומי</p>
+                    </div>
+                    <div class="toc-item" data-prayer="mourning">
+                        <h3>🕊️ תעניות ואבילות</h3>
+                        <p>תפילות אבלות ותענית</p>
+                    </div>
+                    <div class="toc-item" data-prayer="lifecycle">
+                        <h3>🎉 אירועי חיים</h3>
+                        <p>תפילות לאירועי חיים</p>
+                    </div>
+                    <div class="toc-item" data-prayer="home">
+                        <h3>🏠 ברכות הבית</h3>
+                        <p>ברכות לבית ולמשפחה</p>
+                    </div>
+                    <div class="toc-item" data-prayer="nature">
+                        <h3>🌍 ברכות הטבע</h3>
+                        <p>ברכות על תופעות טבע</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="prayer-container" id="introduction">
+            <h2>📖 הקדמה לסידור</h2>
+            <div class="prayer-content">
+                <div class="prayer-card">
+                    <h3>אושר התפילה - מתוך ליקוטי מוהר"ן</h3>
+                    <div class="prayer-text">
+                        <p>אַשְׁרֵי הַתְּפִלָּה, אַשְׁרֵי הַמִּתְפַּלֵּל בְּכָל לֵב וָנֶפֶשׁ, בְּכָל מְאֹדוֹ וּבְכָל
+                            מְאֹדוֹ.
+                            אַשְׁרֵי הַמִּתְפַּלֵּל בְּכָל לֵב וָנֶפֶשׁ, בְּכָל מְאֹדוֹ וּבְכָל מְאֹדוֹ.</p>
+
+                        <p>כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל.
+                            כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל.
+                        </p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל.</p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל.</p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל.</p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל.</p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל.</p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל.</p>
+
+                        <p>וְהַתְּפִלָּה הִיא הַכֹּל, כִּי הַתְּפִלָּה הִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל, וְהִיא הַכֹּל. כִּי הַתְּפִלָּה הִיא הַכֹּל,
+                            וְהִיא הַכֹּל.</p>
+                    </div>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>קונטרס "אושר התפילה" הוא אחד מהחיבורים החשובים של רבי נחמן מברסלב על ענייני התפילה.
+                            הקונטרס מדגיש את חשיבותה של התפילה ואת כוחה העצום בעבודת ה'.
+                            רבי נחמן מלמד אותנו שהתפילה היא הכל, והיא הכל, כי התפילה היא הכל.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prayer-container" id="morning">
+            <h2>🌅 סדר השכמת הבוקר</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של סדר השכמת הבוקר</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="moda-ani">🙏 מודה אני</div>
+                    <div class="prayer-toc-item" data-section="netilat-yadayim">🚰 נטילת ידיים</div>
+                    <div class="prayer-toc-item" data-section="asher-yatzar">💪 אשר יצר</div>
+                    <div class="prayer-toc-item" data-section="elohai-neshama">💫 אלוהי נשמה</div>
+                    <div class="prayer-toc-item" data-section="birkot-hashachar">🌞 ברכות השחר</div>
+                    <div class="prayer-toc-item" data-section="birkot-hatorah">📚 ברכות התורה</div>
+                    <div class="prayer-toc-item" data-section="psukim">📖 פסוקים לאחר ברכת התורה</div>
+                    <div class="prayer-toc-item" data-section="ein-lahem-shiur">⚖️ אלו דברים שאין להם שיעור</div>
+                    <div class="prayer-toc-item" data-section="walking">🚶 סדר ההליכה לבית הכנסת</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <div class="prayer-card" id="moda-ani">
+                    <h3>מודה אני</h3>
+                    <p>מוֹדֶה אֲנִי לְפָנֶיךָ מֶלֶךְ חַי וְקַיָּם, שֶׁהֶחֱזַרְתָּ בִּי נִשְׁמָתִי בְּחֶמְלָה, רַבָּה
+                        אֱמוּנָתֶךָ.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>תפילת הודיה קצרה הנאמרת מיד עם הקימה בבוקר, לפני נטילת ידיים. בתפילה זו אנו מודים לה' על
+                            שהחזיר לנו את נשמתנו בבוקר.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="netilat-yadayim">
+                    <h3>נטילת ידיים</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל
+                        נְטִילַת יָדַיִם.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>נטילת ידיים היא מצווה מהתורה, והיא נעשית עם הקימה בבוקר, לפני כל אכילת לחם, ולאחר השירותים.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="asher-yatzar">
+                    <h3>אשר יצר</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר יָצַר אֶת הָאָדָם בְּחָכְמָה, וּבָרָא בוֹ
+                        נְקָבִים נְקָבִים, חֲלוּלִים חֲלוּלִים. גָּלוּי וְיָדוּעַ לִפְנֵי כִסֵּא כְבוֹדֶךָ, שֶׁאִם
+                        יִפָּתֵחַ אֶחָד מֵהֶם, אוֹ יִסָּתֵם אֶחָד מֵהֶם, אִי אֶפְשַׁר לְהִתְקַיֵּם וְלַעֲמוֹד לְפָנֶיךָ.
+                        בָּרוּךְ אַתָּה ה', רוֹפֵא כָל בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>ברכה זו נאמרת לאחר היציאה מהשירותים, והיא מביעה את ההכרה בחכמת הבורא שברא את גוף האדם בצורה
+                            מופלאה.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="elohai-neshama">
+                    <h3>אלוהי נשמה</h3>
+                    <p>אֱלֹהַי, נְשָׁמָה שֶׁנָּתַתָּ בִּי טְהוֹרָה הִיא. אַתָּה בְרָאתָהּ, אַתָּה יְצַרְתָּהּ, אַתָּה
+                        נְפַחְתָּהּ בִּי, אַתָּה מְשַׁמְּרָהּ בְּקִרְבִּי, וְאַתָּה עָתִיד לִטְּלָהּ מִמֶּנִּי,
+                        וּלְהַחֲזִירָהּ בִּי לֶעָתִיד לָבוֹא. כָּל זְמַן שֶׁהַנְּשָׁמָה בְּקִרְבִּי, מוֹדֶה אֲנִי
+                        לְפָנֶיךָ ה' אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, רִבּוֹן כָּל הַמַּעֲשִׂים, אֲדוֹן כָּל הַנְּשָׁמוֹת.
+                        בָּרוּךְ אַתָּה ה', הַמַּחֲזִיר נְשָׁמוֹת לִגְוִיּוֹת מֵתִים.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>תפילה זו נאמרת בבוקר, והיא מביעה את ההכרה בכך שהנשמה היא מתנה מה' והוא זה שמחזיר אותה לגוף
+                            בכל בוקר.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="birkot-hashachar">
+                    <h3>ברכות השחר</h3>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַנּוֹתֵן לַשֶּׂכְוִי בִינָה לְהַבְחִין בֵּין
+                        יוֹם וּבֵין לָיְלָה.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, פּוֹקֵחַ עִוְרִים.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַתִּיר אֲסוּרִים.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, זוֹקֵף כְּפוּפִים.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַלְבִּישׁ עֲרֻמִּים.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַנּוֹתֵן לַיָּעֵף כֹּחַ.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, רוֹקַע הָאָרֶץ עַל הַמָּיִם.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמֵּכִין מִצְעֲדֵי גָבֶר.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה לִי כָּל צְרָכִי.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אוֹזֵר יִשְׂרָאֵל בִּגְבוּרָה.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹטֵר יִשְׂרָאֵל בְּתִפְאָרָה.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי גּוֹי.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי עָבֶד.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי אִשָּׁה.</p>
+                    <p>בָּרוּךְ שֶׁעָשַׂנִי כִּרְצוֹנוֹ.</p>
+                    <p>בָּרוּךְ אַתָּה יְהוָה אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמַּעֲבִיר חֶבְלֵי שֵׁנָה מֵעֵינַי וּתְנוּמָה
+                        מֵעַפְעַפָּי.</p>
+                    <p>יְהִי רָצוֹן מִלְּפָנֶיךָ יְהוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּרְגִּילֵנִי בְּתוֹרָתֶךָ
+                        וְתַדְבִּיקֵנִי בְּמִצְוֹתֶיךָ, וְאַל תְּבִיאֵנִי לִידֵי חֵטְא וְלֹא לִידֵי עֲבֵרָה וְלֹא לִידֵי
+                        נִסָּיוֹן וְלֹא לִידֵי בִזָּיוֹן, וְתַרְחִיקֵנִי מִיֵּצֶר הָרָע, וְתַדְבִּיקֵנִי בְּיֵצֶר
+                        הַטּוֹב, וְכֹף אֶת יִצְרִי לְהִשְׁתַּעְבֵד לָךְ, וּתְנֵנִי הַיּוֹם וּבְכָל יוֹם לְחֵן וּלְחֶסֶד
+                        וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רוֹאַי, וְגָמְלֵנִי חֲסָדִים טוֹבִים. בָּרוּךְ אַתָּה
+                        יְהוָה, גּוֹמֵל חֲסָדִים טוֹבִים לְעַמּוֹ יִשְׂרָאֵל.</p>
+                    <p>יְהִי רָצוֹן מִלְּפָנֶיךָ יְהוָה אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּצִּילֵנִי הַיּוֹם וּבְכָל יוֹם
+                        וְיוֹם מֵעַזֵי פָנִים וּמֵעַזּוּת פָנִים, מֵאָדָם רָע, מִיֵּצֶר רָע, מֵחָבֵר רָע, מִשָּׁכֵן רָע,
+                        מִפֶּגַע רָע, מֵעַיִן הָרָע, וּמִלָּשׁוֹן הָרָע, מִדִּין קָשֶׁה, וּמִבַּעַל דִּין קָשֶׁה, בֵּין
+                        שֶׁהוּא בֶן בְּרִית וּבֵין שֶׁאֵינוֹ בֶן בְּרִית.</p>
+                </div>
+
+                <div class="prayer-card" id="birkot-hatorah">
+                    <h3>ברכות התורה</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ
+                        לַעֲסֹק בְּדִבְרֵי תוֹרָה.</p>
+                    <p>וְהַעֲרֶב נָא ה' אֱלֹהֵינוּ אֶת דִּבְרֵי תוֹרָתְךָ בְּפִינוּ וּבְפִי עַמְּךָ בֵּית יִשְׂרָאֵל,
+                        וְנִהְיֶה אֲנַחְנוּ וְצֶאֱצָאֵינוּ וְצֶאֱצָאֵי עַמְּךָ בֵּית יִשְׂרָאֵל, כֻּלָּנוּ יוֹדְעֵי
+                        שְׁמֶךָ וְלוֹמְדֵי תוֹרָתְךָ לִשְׁמָהּ. בָּרוּךְ אַתָּה ה', הַמְלַמֵּד תּוֹרָה לְעַמּוֹ
+                        יִשְׂרָאֵל.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>ברכות התורה נאמרות לפני לימוד תורה, ומביעות את ההכרה בחשיבות לימוד התורה ואת התפילה שהלימוד
+                            יהיה לשמה.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="psukim">
+                    <h3>פסוקים לאחר ברכת התורה</h3>
+                    <p>וְאָהַבְתָּ אֵת ה' אֱלֹהֶיךָ בְּכָל לְבָבְךָ וּבְכָל נַפְשְׁךָ וּבְכָל מְאֹדֶךָ.</p>
+                    <p>וְהָיוּ הַדְּבָרִים הָאֵלֶּה אֲשֶׁר אָנֹכִי מְצַוְּךָ הַיּוֹם עַל לְבָבֶךָ.</p>
+                    <p>וְשִׁנַּנְתָּם לְבָנֶיךָ וְדִבַּרְתָּ בָּם בְּשִׁבְתְּךָ בְּבֵיתֶךָ וּבְלֶכְתְּךָ בַדֶּרֶךְ
+                        וּבְשָׁכְבְּךָ וּבְקוּמֶךָ.</p>
+                    <p>וּקְשַׁרְתָּם לְאוֹת עַל יָדֶךָ וְהָיוּ לְטֹטָפֹת בֵּין עֵינֶיךָ.</p>
+                    <p>וּכְתַבְתָּם עַל מְזֻזוֹת בֵּיתֶךָ וּבִשְׁעָרֶיךָ.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>פסוקים אלו, הלקוחים מספר דברים, מדגישים את החשיבות של אהבת ה' ושמירת המצוות בכל עת ובכל מקום.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="ein-lahem-shiur">
+                    <h3>אלו דברים שאין להם שיעור</h3>
+                    <p>אֵלּוּ דְבָרִים שֶׁאֵין לָהֶם שִׁעוּר: הַפֵּאָה, וְהַבִּכּוּרִים, וְהָרְאָיוֹן, וּגְמִילוּת
+                        חֲסָדִים, וְתַלְמוּד תּוֹרָה.</p>
+                    <p>אֵלּוּ דְבָרִים שֶׁאָדָם אוֹכֵל פֵּרוֹתֵיהֶם בָּעוֹלָם הַזֶּה, וְהַקֶּרֶן קַיֶּמֶת לוֹ לָעוֹלָם
+                        הַבָּא: כִּבּוּד אָב וָאֵם, וּגְמִילוּת חֲסָדִים, וְהַשְׁכָּמַת בֵּית הַמִּדְרָשׁ שַׁחֲרִית
+                        וְעַרְבִית, וְהַכְנָסַת אוֹרְחִים, וּבִקּוּר חוֹלִים, וְהַכְנָסַת כַּלָּה, וּלְוָיַת הַמֵּת,
+                        וְעִיּוּן תְּפִלָּה, וַהֲבָאַת שָׁלוֹם בֵּין אָדָם לַחֲבֵרוֹ, וּבֵין אִישׁ לְאִשְׁתּוֹ.
+                        וְתַלְמוּד תּוֹרָה כְּנֶגֶד כֻּלָּם.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>קטע זה ממסכת פאה מדגיש את חשיבותם של מעשים טובים ושל לימוד תורה, שאין להם שיעור, ואת השכר
+                            הגדול הצפוי להם בעולם הבא.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="walking">
+                    <h3>סדר ההליכה לבית הכנסת</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ
+                        לִהְיוֹת מִתְפַּלֵּל בְּצִבּוּר.</p>
+                    <p>הִנְנִי מוּכָן וּמְזֻמָּן לְקַיֵּם מִצְוַת עֲשֵׂה שֶׁל תְּפִלָּה בְּצִבּוּר. יְהִי רָצוֹן
+                        מִלְּפָנֶיךָ ה' אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתְּהֵא תְּפִלָּתִי בְּצִבּוּר מְקֻבֶּלֶת
+                        וּרְצוּיָה לְפָנֶיךָ.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>תפילות אלו נאמרות בדרך לבית הכנסת, ומביעות את ההכנה הנפשית לתפילה בציבור ואת התפילה שהתפילה
+                            תהיה רצויה לפני ה'.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prayer-container" id="midnight">
+            <h2>🌌 סדר תיקון חצות</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של סדר תיקון חצות</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="tikkun-rachel">😢 תיקון רחל</div>
+                    <div class="prayer-toc-item" data-section="tikkun-leah">😊 תיקון לאה</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <div class="prayer-card" id="tikkun-rachel">
+                    <h3>תיקון רחל</h3>
+                    <p>כֹּה אָמַר ה': קוֹל בְּרָמָה נִשְׁמָע נְהִי בְּכִי תַמְרוּרִים רָחֵל מְבַכָּה עַל בָּנֶיהָ
+                        מֵאֲנָה לְהִנָּחֵם עַל בָּנֶיהָ כִּי אֵינֶנּוּ.</p>
+                    <p>כֹּה אָמַר ה': מִנְעִי קוֹלֵךְ מִבֶּכִי וְעֵינַיִךְ מִדִּמְעָה כִּי יֵשׁ שָׂכָר לִפְעֻלָּתֵךְ
+                        נְאֻם ה' וְשָׁבוּ מֵאֶרֶץ אוֹיֵב.</p>
+                    <p>וְיֵשׁ תִּקְוָה לְאַחֲרִיתֵךְ נְאֻם ה' וְשָׁבוּ בָנִים לִגְבוּלָם.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>תיקון רחל הוא חלק מסדר תיקון חצות, הנאמר בחצות הלילה. הוא מביע את צערה של רחל אמנו על גלות
+                            בניה, ואת הנחמה שה' מבטיח לה על שובם לארץ.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="tikkun-leah">
+                    <h3>תיקון לאה</h3>
+                    <p>וַיַּרְא ה' כִּי שְׂנוּאָה לֵאָה וַיִּפְתַּח אֶת רַחְמָהּ וְרָחֵל עֲקָרָה.</p>
+                    <p>וַתַּהַר לֵאָה וַתֵּלֶד בֵּן וַתִּקְרָא שְׁמוֹ רְאוּבֵן כִּי אָמְרָה כִּי רָאָה ה' בְּעָנְיִי
+                        כִּי עַתָּה יֶאֱהָבַנִי אִישִׁי.</p>
+                    <p>וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר כִּי שָׁמַע ה' כִּי שְׂנוּאָה אָנֹכִי וַיִּתֶּן לִי גַּם
+                        אֶת זֶה וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>תיקון לאה הוא החלק השני של סדר תיקון חצות. הוא מתאר את סיפור לידת בניה של לאה אמנו, ואת ההכרה
+                            בכך שה' רואה את מצוקתה ונותן לה בנים.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prayer-container" id="shacharit">
+            <h2>🌄 תפילת שחרית</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של תפילת שחרית</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="eliyahu">🔥 פתיחת אליהו</div>
+                    <div class="prayer-toc-item" data-section="tallit">🧣 סדר עטיפת טלית</div>
+                    <div class="prayer-toc-item" data-section="tefillin">📜 סדר הנחת תפילין</div>
+                    <div class="prayer-toc-item" data-section="hanna">🙏 ותתפלל חנה</div>
+                    <div class="prayer-toc-item" data-section="korbanot">🐑 סדר הקורבנות</div>
+                    <div class="prayer-toc-item" data-section="hodu">🎵 הודו לה' קראו בשמו</div>
+                    <div class="prayer-toc-item" data-section="baruch-sheamar">📖 ברוך שאמר</div>
+                    <div class="prayer-toc-item" data-section="pesukei-dzimra">🎶 פסוקי דזמרה</div>
+                    <div class="prayer-toc-item" data-section="yishtabach">🙌 ישתבח</div>
+                    <div class="prayer-toc-item" data-section="shema">📜 קריאת שמע וברכותיה</div>
+                    <div class="prayer-toc-item" data-section="amida">🙏 תפילת העמידה</div>
+                    <div class="prayer-toc-item" data-section="chazarat-hashatz">🎤 חזרת הש"ץ</div>
+                    <div class="prayer-toc-item" data-section="tachanun">😔 תחנון</div>
+                    <div class="prayer-toc-item" data-section="ashrei">📖 אשרי ובא לציון</div>
+                    <div class="prayer-toc-item" data-section="kaddish">📜 קדיש תתקבל</div>
+                    <div class="prayer-toc-item" data-section="shir">🎵 שיר של יום</div>
+                    <div class="prayer-toc-item" data-section="pitum">🕯️ פטום הקטורת</div>
+                    <div class="prayer-toc-item" data-section="aleinu">🙌 עלינו לשבח</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <div class="prayer-card" id="birkot-hashachar">
+                    <h3>ברכות השחר</h3>
+                    <p>אֱלֹהַי, נְשָׁמָה שֶׁנָּתַתָּ בִּי טְהוֹרָה הִיא. אַתָּה בְרָאתָהּ, אַתָּה יְצַרְתָּהּ, אַתָּה
+                        נְפַחְתָּהּ בִּי, אַתָּה מְשַׁמְּרָהּ בְּקִרְבִּי, וְאַתָּה עָתִיד לִטְּלָהּ מִמֶּנִּי,
+                        וּלְהַחֲזִירָהּ בִּי לֶעָתִיד לָבוֹא. כָּל זְמַן שֶׁהַנְּשָׁמָה בְּקִרְבִּי, מוֹדֶה אֲנִי
+                        לְפָנֶיךָ ה' אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, רִבּוֹן כָּל הַמַּעֲשִׂים, אֲדוֹן כָּל הַנְּשָׁמוֹת.
+                        בָּרוּךְ אַתָּה ה', הַמַּחֲזִיר נְשָׁמוֹת לִגְוִיּוֹת מֵתִים.</p>
+                </div>
+
+                <div class="prayer-card" id="birkot-hatorah">
+                    <h3>ברכות התורה</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ
+                        לַעֲסֹק בְּדִבְרֵי תוֹרָה.</p>
+                </div>
+
+                <div class="prayer-card" id="eliyahu">
+                    <h3>פתיחת אליהו</h3>
+                    <p>וְהוּא רַחוּם יְכַפֵּר עָוֹן וְלֹא יַשְׁחִית וְהִרְבָּה לְהָשִׁיב אַפּוֹ וְלֹא יָעִיר כָּל
+                        חֲמָתוֹ.</p>
+                </div>
+
+                <div class="prayer-card" id="tzitzit">
+                    <h3>סדר עטיפת ציצית</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל
+                        מִצְוַת צִיצִית.</p>
+                </div>
+
+                <div class="prayer-card" id="tefillin">
+                    <h3>סדר הנחת תפילין</h3>
+                    <p>בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל
+                        מִצְוַת תְּפִלִּין.</p>
+                </div>
+
+                <div class="prayer-card" id="pesukei-dzimra">
+                    <h3>פסוקי דזמרה</h3>
+                    <p>הוֹדוּ לַה' קִרְאוּ בִשְׁמוֹ, הוֹדִיעוּ בָעַמִּים עֲלִילוֹתָיו. שִׁירוּ לוֹ זַמְּרוּ לוֹ, שִׂיחוּ
+                        בְּכָל נִפְלְאוֹתָיו.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>פסוקי דזמרה הם סדרת מזמורי תהילים הנאמרים בתחילת תפילת שחרית, המביעים שבח והודיה לה'.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="shema">
+                    <h3>קריאת שמע וברכותיה</h3>
+                    <p>שְׁמַע יִשְׂרָאֵל ה' אֱלֹהֵינוּ ה' אֶחָד. בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד.</p>
+                </div>
+
+                <div class="prayer-card" id="amida">
+                    <h3>תפילת העמידה</h3>
+                    <p>אֲדֹנָי שְׂפָתַי תִּפְתָּח וּפִי יַגִּיד תְּהִלָּתֶךָ. בָּרוּךְ אַתָּה ה' אֱלֹהֵינוּ וֵאלֹהֵי
+                        אֲבוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב, הָאֵל הַגָּדוֹל הַגִּבּוֹר
+                        וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, וְקוֹנֵה הַכֹּל, וְזוֹכֵר חַסְדֵי אָבוֹת,
+                        וּמֵבִיא גוֹאֵל לִבְנֵי בְנֵיהֶם לְמַעַן שְׁמוֹ בְּאַהֲבָה.</p>
+                </div>
+
+                <div class="prayer-card" id="tachanun">
+                    <h3>תחנון</h3>
+                    <p>וַיֹּאמֶר דָּוִד אֶל גָּד כִּי אֲנִי בְּצַר לִי מְאֹד נִפְּלָה נָּא בְיַד ה' כִּי רַבִּים
+                        רַחֲמָיו וּבְיַד אָדָם אַל אֶפֹּלָה.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>תחנון הוא תפילת תחנונים הנאמרת לאחר תפילת העמידה, המבטאת את בקשת הרחמים מה'.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="ashrei">
+                    <h3>אשרי</h3>
+                    <p>אַשְׁרֵי יוֹשְׁבֵי בֵיתֶךָ, עוֹד יְהַלְלוּךָ סֶּלָה. אַשְׁרֵי הָעָם שֶׁכָּכָה לּוֹ, אַשְׁרֵי
+                        הָעָם שֶׁה' אֱלֹהָיו.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>אשרי הוא מזמור תהילים הנאמר לאחר תפילת העמידה, המביע את האושר של יושבי בית ה' ואת השבח לה'.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="uva-letzion">
+                    <h3>ובא לציון</h3>
+                    <p>וּבָא לְצִיּוֹן גּוֹאֵל וּלְשָׁבֵי פֶשַׁע בְּיַעֲקֹב נְאֻם ה'. וַאֲנִי זֹאת בְּרִיתִי אוֹתָם
+                        אָמַר ה' רוּחִי אֲשֶׁר עָלֶיךָ וּדְבָרַי אֲשֶׁר שַׂמְתִּי בְּפִיךָ לֹא יָמוּשׁוּ מִפִּיךָ
+                        וּמִפִּי זַרְעֲךָ וּמִפִּי זֶרַע זַרְעֲךָ אָמַר ה' מֵעַתָּה וְעַד עוֹלָם.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>ובא לציון הוא קטע הנאמר בסוף תפילת שחרית, המבטא את התקווה לגאולה ולשיבת ציון.</p>
+                    </div>
+                </div>
+
+                <div class="prayer-card" id="aleinu">
+                    <h3>עלינו לשבח</h3>
+                    <p>עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל, לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית, שֶׁלֹּא עָשָׂנוּ
+                        כְּגוֹיֵי הָאֲרָצוֹת, וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה, שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם,
+                        וְגוֹרָלֵנוּ כְּכָל הֲמוֹנָם.</p>
+                    <div class="prayer-explanation">
+                        <h4>הסבר:</h4>
+                        <p>עלינו לשבח הוא תפילת סיום תפילת שחרית, המביעה את ההכרה בגדולת ה' ואת הייחוד של עם ישראל.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="prayer-container" id="mincha">
+            <h2>🌇 תפילת מנחה</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של תפילת מנחה</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="mincha-ashrei">📖 אשרי</div>
+                    <div class="prayer-toc-item" data-section="mincha-amida">🙏 תפילת העמידה</div>
+                    <div class="prayer-toc-item" data-section="mincha-tachanun">😔 תחנון</div>
+                    <div class="prayer-toc-item" data-section="mincha-kaddish">📜 קדיש</div>
+                    <div class="prayer-toc-item" data-section="mincha-aleinu">🙌 עלינו לשבח</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילת מנחה -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="arvit">
+            <h2>🌃 תפילת ערבית</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של תפילת ערבית</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="arvit-shema">📜 קריאת שמע וברכותיה</div>
+                    <div class="prayer-toc-item" data-section="arvit-amida">🙏 תפילת העמידה</div>
+                    <div class="prayer-toc-item" data-section="arvit-chazarat">🎤 חזרת הש"ץ</div>
+                    <div class="prayer-toc-item" data-section="arvit-kaddish">📜 קדיש</div>
+                    <div class="prayer-toc-item" data-section="arvit-aleinu">🙌 עלינו לשבח</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילת ערבית -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="shabbat">
+            <h2>🕯️ שבת ומועדים</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של שבת ומועדים</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="shabbat-candles">🕯️ סדר הדלקת נרות שבת</div>
+                    <div class="prayer-toc-item" data-section="kabbalat-shabbat">🎵 קבלת שבת</div>
+                    <div class="prayer-toc-item" data-section="shabbat-evening">🌙 ערבית של שבת</div>
+                    <div class="prayer-toc-item" data-section="shabbat-night">🍽️ סדר ליל שבת</div>
+                    <div class="prayer-toc-item" data-section="shabbat-morning">🌅 שחרית של שבת</div>
+                    <div class="prayer-toc-item" data-section="musaf">📜 מוסף של שבת</div>
+                    <div class="prayer-toc-item" data-section="seuda-shenit">🍽️ סעודה שנייה</div>
+                    <div class="prayer-toc-item" data-section="shabbat-mincha">🌇 מנחה לשבת קודש</div>
+                    <div class="prayer-toc-item" data-section="seuda-shlishit">🍽️ סעודה שלישית</div>
+                    <div class="prayer-toc-item" data-section="havdalah">🕯️ הבדלה ומוצאי שבת</div>
+                    <div class="prayer-toc-item" data-section="rosh-chodesh">🌙 סדר ראש חודש</div>
+                    <div class="prayer-toc-item" data-section="regalim">🎉 תפילה לשלוש רגלים</div>
+                    <div class="prayer-toc-item" data-section="hanukkah">🕎 חנוכה</div>
+                    <div class="prayer-toc-item" data-section="purim">🎭 פורים</div>
+                    <div class="prayer-toc-item" data-section="nissan">🌸 חודש ניסן</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="blessings">
+            <h2>🙏 ברכות ותפילות שונות</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של ברכות ותפילות שונות</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="birkat-hamazon">🍞 ברכת המזון</div>
+                    <div class="prayer-toc-item" data-section="meein-shalosh">🍰 ברכת מעין שלוש</div>
+                    <div class="prayer-toc-item" data-section="birkot-hanehenin">🍎 ברכות הנהנין</div>
+                    <div class="prayer-toc-item" data-section="omer">🌾 ספירת העומר</div>
+                    <div class="prayer-toc-item" data-section="levana">🌙 ברכת הלבנה</div>
+                    <div class="prayer-toc-item" data-section="shema-al-hamita">🛏️ קריאת שמע שעל המיטה</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="learning">
+            <h2>📖 משניות ולימוד יומי</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של משניות ולימוד יומי</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="mishnayot-shabbat">📚 משניות שבת</div>
+                    <div class="prayer-toc-item" data-section="pirkei-avot">📜 פרקי אבות</div>
+                    <div class="prayer-toc-item" data-section="tehilim">📖 פרקי תהילים</div>
+                    <div class="prayer-toc-item" data-section="learning-neshama">🕊️ לימוד לעילוי נשמה</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="mourning">
+            <h2>🕊️ תעניות ואבילות</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של תעניות ואבילות</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="selichot">🙏 סליחות</div>
+                    <div class="prayer-toc-item" data-section="avelut">😢 אבלות</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="lifecycle">
+            <h2>🎉 אירועי חיים</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של אירועי חיים</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="erusin">💍 סדר ארוסין</div>
+                    <div class="prayer-toc-item" data-section="nissuin">👰 סדר נשואין</div>
+                    <div class="prayer-toc-item" data-section="sheva-brachot">🎉 סדר שבע ברכות</div>
+                    <div class="prayer-toc-item" data-section="brit-mila">✂️ סדר ברית מילה</div>
+                    <div class="prayer-toc-item" data-section="pidyon-haben">👶 סדר פדיון הבן</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="home">
+            <h2>🏠 ברכות הבית</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של ברכות הבית</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="mezuzah">📜 ברכת המזוזה</div>
+                    <div class="prayer-toc-item" data-section="maake">🏗️ ברכת המעקה</div>
+                    <div class="prayer-toc-item" data-section="challah">🍞 סדר הפרשת חלה</div>
+                    <div class="prayer-toc-item" data-section="keilim">🍽️ ברכת טבילת כלים</div>
+                    <div class="prayer-toc-item" data-section="maaser">💰 סדר הפרשת תרומות ומעשרות</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+
+        <div class="prayer-container" id="nature">
+            <h2>🌍 ברכות הטבע</h2>
+            <div class="prayer-toc">
+                <h3>📑 תוכן העניינים של ברכות הטבע</h3>
+                <div class="prayer-toc-grid">
+                    <div class="prayer-toc-item" data-section="keshet">🌈 ברכת הקשת</div>
+                    <div class="prayer-toc-item" data-section="barkim">⚡ ברכת ברקים ורעמים</div>
+                    <div class="prayer-toc-item" data-section="refuah">💊 תפלת הנוטל תרופה</div>
+                    <div class="prayer-toc-item" data-section="derech">🛣️ תפלת הדרך</div>
+                </div>
+            </div>
+            <div class="prayer-content">
+                <!-- תוכן תפילות מיוחדות -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 ️ סידור אנלומינוס | כל הזכויות שמורות</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
