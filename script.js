@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tocItems = document.querySelectorAll(".toc-item");
   const prayerContainers = document.querySelectorAll(".prayer-container");
   const prayerTocItems = document.querySelectorAll(".prayer-toc-item");
-  const prayerCards = document.querySelectorAll(".prayer-card");
+  
 
   // פונקציה להצגת תפילה מסוימת
   function showPrayer(prayerId) {

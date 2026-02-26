@@ -1,0 +1,18 @@
+{
+  "name": "siddur-anlominus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint:js": "eslint . --ext .js,.html",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:html": "htmlhint \"**/*.html\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-plugin-html": "^7.1.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "htmlhint": "^0.14.2"
+  }
+}
